@@ -10,6 +10,9 @@
     "scraping"
   ],
   "bin": "./bin/casperjs",
+  "scripts": {
+    "test": "./bin/casperjs selftest"
+  },
   "author": {
     "name": "CasperJS Organization",
     "web": "https://casperjs.org/"

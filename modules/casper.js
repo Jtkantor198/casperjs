@@ -88,6 +88,11 @@ var Casper = function Casper(options) {
     if (!(this instanceof Casper)) {
         return new Casper(options);
     }
+    if (this.filter===undefined){
+        this.filter = function(){
+            return undefined;
+        }
+    }
     // default options
     this.defaults = {
         clientScripts:       [],

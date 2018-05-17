@@ -86,7 +86,11 @@ var Tester = function Tester(casper, options) {
     if (!utils.isCasperObject(casper)) {
         throw new CasperError("Tester needs a Casper instance");
     }
-
+    if (this.filter===undefined){
+        this.filter = function(){
+            return undefined;
+        }
+    }
     // self reference
     var self = this;
 
